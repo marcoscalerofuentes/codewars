@@ -4,22 +4,23 @@
 public class Kata {
   public static String createPhoneNumber(int[] numbers) {
     String phone = "(";
-  for (int i = 0; i < numbers.length; i++) {
-    if(i<=2){
-      phone += numbers[i];
+    for (int i = 0; i < numbers.length; i++) {
+      if (i <= 2) {
+        phone += numbers[i];
+      }
+      if (i == 2) {
+        phone += ") ";
+      }
+      if (i > 2 && i <= 5) {
+        phone += numbers[i];
+      }
+      if (i == 5) {
+        phone += "-";
+      }
+      if (i > 5) {
+        phone += numbers[i];
+      }
     }
-     if(i==2){
-      phone += ") ";
-    }
-     if(i>2 && i<=5){
-      phone += numbers[i];
-    }
-    if(i==5){
-      phone += "-";
-    }
-    if(i>5){
-      phone += numbers[i];
-    }
-  }return phone;
+    return phone;
   }
 }
