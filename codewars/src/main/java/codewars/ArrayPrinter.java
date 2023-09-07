@@ -2,6 +2,7 @@ package codewars;
 
 
 public class ArrayPrinter {
+ 
 public static void main(String[] args) {
   Object[] array = new Object[] { 2, 4, 5, 2 };
   System.out.println(printArray(array));
